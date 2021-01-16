@@ -10,7 +10,7 @@ export default class MyToDoList extends React.Component {
     super(props);
     // Change code below this line
     this.state = {
-      input: '',
+      userInput: '',
       toDoList: []
     }
     // Change code above this line
@@ -29,7 +29,7 @@ export default class MyToDoList extends React.Component {
     });
   }
   render() {
-    const items = this.state.toDoList.map(task => <li>{task}</li>)
+    const items = this.state.toDoList.map(task => <li key={task+1}>{task}</li>)
     return (
       <div>
         <textarea
